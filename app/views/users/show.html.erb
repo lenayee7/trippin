@@ -1,0 +1,12 @@
+<h1>Hiii, <%= @user.username %></h1>
+
+<div class="navBar">
+	<%= link_to "My Trips", trips_path %> 
+	<%= link_to "New Trip", new_trip_path %> 
+	<%= link_to "Log Out", sign_in_path %> 
+</div>
+
+ <span><% @user.trips.each do |t| %></span><br>
+ <span><%= t.location %>, <%= t.description%></span>
+	
+<% end %>

@@ -1,0 +1,7 @@
+<h1 id="trippin"><%= link_to "Trippin'", "/users"%></h1>
+
+<%= form_for @user, url: "/sessions", method: "post", html: {class: "center"} do |f| %>
+			<%= f.text_field :username, placeholder: "Username" %>
+	    <%= f.password_field :password, placeholder: "Password" %>
+		  <%= f.submit "Log In", html: {class: "signUp"} %>
+<% end %> 

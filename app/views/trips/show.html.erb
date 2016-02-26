@@ -1,0 +1,23 @@
+<h2><%= @trip.location %></h2>
+
+<%= link_to "Add Post", new_trip_post_path(@trip) %>
+<%= link_to "User", user_path(current_user) %>
+
+<% @posts.each do |post| %>
+	<ul>
+		<li><%= post.title %></li>
+		<li><%= post.description %></li>
+		<li><%= post.context %></li>
+	</ul>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+

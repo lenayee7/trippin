@@ -1,0 +1,10 @@
+<h1> Edit Trip</h1>
+<%= form_for @trip do |f| %>
+		<%= f.text_field :location, placeholder: "Location" %><br>
+		<%= f.text_field :description, placeholder: "Description" %><br>
+		<%= f.date_field :start_date, placeholder: "Start Date" %><br>
+    <%= f.date_field :end_date, placeholder: "End Date" %><br>
+		<%= f.submit "Update Trip" %>
+<% end %>
+
+<%= button_to "Delete", "trips/#{@trip.id}", method: "delete" %>

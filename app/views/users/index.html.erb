@@ -1,0 +1,16 @@
+<div class="navBar">
+	<h1 id="trippin"><%= link_to "Trippin'", "/users"%></h1>
+	<%= link_to "Sign Up", new_user_path %> 
+	<%= link_to "Log In", "/sign_in" %>
+</div>
+
+<div>
+	There are currently <%= @users.length %> signed_up
+</div>
+
+<% @users.each do |user| %>
+  <div>
+    <h3><%= user.username %></h3>
+ 	</div>
+
+<% end %>

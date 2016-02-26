@@ -1,0 +1,18 @@
+
+<div id="signUp">
+
+  <%= form_for @user, html: {class: "center"} do |f| %>
+
+		<%= f.text_field :first_name, placeholder: "First Name" %><br>
+		
+		<%= f.text_field :last_name, placeholder: "Last Name" %><br>
+
+		<%= f.text_field :username, placeholder: "Username" %><br>
+
+    <%= f.password_field :password, placeholder: "Password" %><br>
+
+		<%= f.submit "Sign Up", html: {class: "signUp"}%>
+
+	<% end %>
+
+</div>
