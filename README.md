@@ -1,5 +1,3 @@
-== README
-
 #**Trippin'** (work in progress)
 
 ###About the App
@@ -20,7 +18,7 @@ Deploy on local host(not heroku material)
 All Instructors
 Stand Up leader, Ilias - defining purpose of app
 All Classmates
-Alex, Ben, Matt, Vien, Daniel(upload care),  Thank you, CALEB!
+Alex, Ben, Matt, Vien, Daniel(upload care), Monq(Github)  Thank you, CALEB!
 TA-Daniel Gih
 
 
