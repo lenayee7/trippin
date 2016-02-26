@@ -2,13 +2,26 @@
 <html>
 <head>
   <title>TripApp</title>
+	<script>
+  UPLOADCARE_LOCALE = "en";
+  UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram";
+  UPLOADCARE_PUBLIC_KEY = "d8d390748abfff98b0be";
+	</script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<div class="errors">
+		<% flash.each do  |key, value| %>
+	    <div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %>
+	</div>
+
+	<div class="main">
+		<%= yield %>
+	</div>
 
 </body>
 </html>

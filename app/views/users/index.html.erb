@@ -1,16 +1,10 @@
 <div class="navBar">
 	<h1 id="trippin"><%= link_to "Trippin'", "/users"%></h1>
-	<%= link_to "Sign Up", new_user_path %> 
-	<%= link_to "Log In", "/sign_in" %>
+		<p id="intro">Trippin allows you to create your own blog documenting 	memorable moments
+			whether you are all the way across the country or road tripping to vegas for a bachelor party. It is your minified version of the highlights on your trip.
+			Create posts with text, photo, or maybe a url link of a website. Just do it.
+		</p>
+
+	<%= link_to "Sign Up", new_user_path, class: "homeBtns" %> 
+	<%= link_to "Log In", "/sign_in", class: "homeBtns"  %>
 </div>
-
-<div>
-	There are currently <%= @users.length %> signed_up
-</div>
-
-<% @users.each do |user| %>
-  <div>
-    <h3><%= user.username %></h3>
- 	</div>
-
-<% end %>

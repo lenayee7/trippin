@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 			login(@user)
 			redirect_to "/users/#{@user.id}"
 		else
-			redirect_to login_path,
+			redirect_to "/",
 			:flash => { :error => "Incorrect USERNAME or PASSWORD, try again case sensitive"  }
 		end
 	end

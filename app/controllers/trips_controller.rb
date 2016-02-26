@@ -16,7 +16,7 @@ class TripsController < ApplicationController
 	end
 
  	def show
-		@trip = Trip.find(params[:id])
+		@trip = current_user.trips.find(params[:id])
 		@posts = @trip.posts
 		render :show
 	end
@@ -33,9 +33,9 @@ class TripsController < ApplicationController
 	end
 
 	def destroy
-    trip = Trip.find(params[:id])
+		trip = current_user.trips.find(params[:id])
     trip.destroy
-  redirect_to "/trips"
+  	redirect_to "/trips"
 	end
 
 private

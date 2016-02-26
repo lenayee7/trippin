@@ -5,13 +5,19 @@
     <%= f.text_field :title %>
   </div>
 
-  <div class="post">
+   <div class="post">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
+
   <div class="post">
     <%= f.label :context %><br>
     <%= f.text_area :context %>
+  </div>
+
+  <div class="field">
+    <%= f.label :picture %><br>
+    <input type="hidden" name="post[photo_url]" role="uploadcare-uploader" />
   </div>
 
   <div class="submitPost">

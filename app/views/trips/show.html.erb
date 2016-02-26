@@ -1,17 +1,17 @@
 <h2><%= @trip.location %></h2>
 
+<%= link_to "User Home", user_path(current_user) %>
 <%= link_to "Add Post", new_trip_post_path(@trip) %>
-<%= link_to "User", user_path(current_user) %>
+<%= link_to "Edit", edit_trip_path%>
 
 <% @posts.each do |post| %>
-	<ul>
-		<li><%= post.title %></li>
-		<li><%= post.description %></li>
-		<li><%= post.context %></li>
-	</ul>
+    <div class="posts">
+        <%= post.title %><br>
+        <%= post.description %><br>
+        <%= post.context %><br>
+        <%= image_tag post.photo_url, :size => '260x260' %> 
+    </div>
 <% end %>
-
-
 
 
 

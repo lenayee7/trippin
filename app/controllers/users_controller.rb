@@ -13,12 +13,13 @@ class UsersController < ApplicationController
 	def create
 		@user = User.create(user_params)
 		login(@user)
-		redirect_to "/users"
+		redirect_to @user
 	end
 
  	def show
 		@user = User.find(params[:id])
-		@trip = Trip.new
+		# @trip = Trip.new
+		# @trip = current_user.trips.find(params[:id])
 		render :show
 	end
 
